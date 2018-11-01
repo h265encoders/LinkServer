@@ -38,7 +38,17 @@ bool Script::saveConfig(QVariant data, QString path)
 {
     if(!path.startsWith("/"))
         path="/link/config/"+path;
-    return Json::saveFile(data,path);
+    if(data.toMap().isEmpty())
+    {
+        QFile f(path);
+        f.open(QFile::ReadWrite);
+        f.resize(0);
+        f.write(data.toString().toUtf8().data(),data.toString().toUtf8().length());
+        f.close();
+        return true;
+    }
+    else
+        return Json::saveFile(data,path);
 }
 
 QString Script::readFile(QString path)

@@ -28,6 +28,7 @@ void Server::init()
     rpcServer->addMethod("Link.getLog", this, "getLog");
     rpcServer->addMethod("Link.LOG", this, "LOG");
     rpcServer->addMethod("Link.reset", this, "reset");
+    rpcServer->addMethod("Link.invoke", this, "invoke");
     rpcServer->addMethod("Script.call", script, "call");
 
     timerKill.setSingleShot(true);

@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     groupRPC->init();
     script->init();
     server->init();
-    server->openLog();
+//    server->openLog();
 
     for(int i=1;i<argc;i++)
     {
