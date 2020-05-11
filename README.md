@@ -3,6 +3,7 @@
 #### 项目介绍
 该工程基于LinkLib，支持脚本运行，可以独立使用，也是LinkDesign的服务端。
 
+---
 **相关目录:**  
 编码器源码： https://gitee.com/LinkPi/Encoder  
 编码器使用说明书: https://gitee.com/LinkPi/Encoder/wikis/pages  
